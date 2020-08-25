@@ -10,6 +10,7 @@ public class DBConnection {
 	public final static String DB_URL = "jdbc:mysql://127.0.0.1:3306/practice";
 	public final static String DB_USERNAME = "root";
 	public final static String DB_PASSWORD = "root";
+	
 
 	public static Connection getConnection() throws ClassNotFoundException, SQLException {
 		Connection con = null;
