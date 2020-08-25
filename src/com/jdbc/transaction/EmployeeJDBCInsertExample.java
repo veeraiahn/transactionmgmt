@@ -15,16 +15,11 @@ public class EmployeeJDBCInsertExample {
 		Connection con = null;
 		try {
 			con = DBConnection.getConnection();
-			
-			//set auto commit to false
-			con.setAutoCommit(false);
 
 			EmployeeJDBCInsertExample.insertEmployeeData(con, 1, "Pankaj");
 
 			EmployeeJDBCInsertExample.insertAddressData(con, 1, "Albany Dr", "San", "USA");
-			
-			//now commit transaction
-			con.commit();
+
 		} catch (SQLException | ClassNotFoundException e) {
 			e.printStackTrace();
 		} finally {
